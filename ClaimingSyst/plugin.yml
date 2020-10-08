@@ -1,0 +1,7 @@
+name: Claiming
+version: 1.0
+main: de.deniz.claim.main.Main
+author: Deniz Cakmak, E-Mail;dca1800@gmail.com bei Problemen.
+
+commands:
+   claim:

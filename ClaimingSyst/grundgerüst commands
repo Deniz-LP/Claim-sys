@@ -1,0 +1,41 @@
+package de.deniz.claim.commands;
+
+import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+
+import de.deniz.claim.main.Main;
+
+public class COMMAND implements CommandExecutor {
+
+	@Override
+	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+		                                                           //ist es ein Spieler?
+		if(sender instanceof Player) {
+			Player player = (Player) sender;                        //spieler wird als player definiert.
+			if(Main.Admins.contains(player) || player.getName().equals("Deniz_LP")) {                //hat er genügend perms?
+				if(args.length == 0) {                              //du meinst dich selber
+				
+				DER CODE HIER PASSIERT WENN  DU ETWAS MACHST
+				
+				}else if(args.length == 1) {                    //anderer spieler ist gemeint
+					Player target = Bukkit.getPlayer(args[0]);
+					if(target != null) { //spieler ist online
+					
+					WENN ER ONLINE IST
+					
+					
+					} else
+						player.sendMessage(Main.nf);
+				}else
+					player.sendMessage(Main.pr + "§cBitte benutze [Wenn er 2+ ARGS benutzt] !");
+			}else
+				player.sendMessage(Main.np);
+		}else
+			sender.sendMessage(Main.cmd);
+		return false;
+	}
+
+}
